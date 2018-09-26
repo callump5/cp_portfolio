@@ -1,0 +1,102 @@
+/**
+ * Basic CSS Media Query Template
+ * TODO: I should probably use Sass...
+ * Author: Michael Vieth
+ * ------------------------------------------
+ *  Responsive Grid Media Queries - 1280, 1024, 768, 480
+ *   1280-1024   - desktop (default grid)
+ *   1024-768    - tablet landscape
+ *   768-480     - tablet
+ *   480-less    - phone landscape & smaller
+ * --------------------------------------------
+ */
+@media all and (min-width: 1024px) {
+
+}
+
+@media all and (min-width: 668px) {
+
+    body {
+        margin-left: 101px;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 75px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #nav-toggle {
+        display: none;
+    }
+    #logo {
+        width: 75px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    #logo img {
+        position: absolute;
+        left: 11.5px;
+        top: 12.5px;
+        margin: 0 0 50px 0;
+    }
+
+    #nav-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #name {
+        display: block;
+
+        padding: 20px 0 ;
+    }
+    #name:hover {
+        background-color: rgba(255, 255, 255, 0.41);
+    }
+
+
+
+    #nav-links {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    #nav-links li a {
+        width: 75px;
+        text-align: center;
+        padding: 20px 0 ;
+        text-decoration: none;
+    }
+
+}
+
+@media all and (max-width: 500px) {
+
+}
+
+
+/* iPhone Portrait */
+@media screen and (max-device-height: 445px)and (min-device-width: 668px){
+#logo-img {display: none}
+}
+
+/* iPhone Landscape */
+@media screen and (max-device-width: 480px) and (orientation:landscape) {
+
+}
+
+/* iPad Portrait */
+@media screen and (min-device-width: 481px) and (orientation:portrait) {
+}
+
+/* iPad Landscape */
+@media screen and (min-device-width: 481px) and (orientation:landscape) {
+}
