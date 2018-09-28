@@ -1,0 +1,246 @@
+/* Variables */
+:root {
+    --navWidth: 90px;
+    --navPadding: 10px;
+    --logoWidth: 70px;
+    --navColor1: rgb(25, 255, 154);
+    --navColor2: rgb(75, 41, 191);
+    --background1: #060610;
+    --background2: rgba(0, 204, 255, 0.29);
+    --navText: #000000;
+    --navSpacing: 15px;
+    --textColor: #f8fff7;
+
+    --color1: #5bff64;
+    --color2: #38f0ff;
+    --color3: #ff48ed;
+
+}
+/* Fonts */
+
+
+h1, h2, h3, h4, ul, li, a, button, th, td, text, p, label, span{
+    color: var(--textColor);
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+
+/* Index */
+
+body {
+    background-color: var(--background1);
+}
+
+
+/* Side Nav */
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    min-height: 100vh;
+    width: var(--navWidth);
+    padding: var(--navPadding);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, var(--navColor1) 50%, var(--navColor2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+
+    z-index: 100;
+}
+
+#logo img {
+    width: var(--logoWidth);
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: none;
+}
+
+#name {
+    padding: var(--navSpacing) 0;
+    border-bottom: var(--navText) 5px solid;
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav li {
+    width: var(--logoWidth);
+    height: 50px;
+    margin:1.25px 0;
+    padding:1.25px 0;
+    border-bottom: 1px solid var(--navText);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav li:nth-child(1) {
+    border-top: 1px solid var(--navText);
+}
+
+.nav li:hover{
+    background-color: var(--background2);
+}
+
+nav p, nav ul li, nav a {
+    color: var(--navText);
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: black;
+    background-color: var(--background2);
+}
+
+#name {
+    display: none;
+}
+
+
+/* Content Layout */
+
+#main {
+    height: 100%;
+    margin: 0 auto;
+    padding-left: var(--navWidth);
+}
+
+
+.page {
+    min-height: 100vh;
+    padding: 25px 10px 25px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.pageRow {
+    flex-direction: row;
+    align-items: center;
+}
+
+.pageRow .col-md-4 {
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.btn {
+    border: 2px solid var(--background2);
+    margin-top: 10px;
+}
+
+
+/* Projects */
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
+
+.project-img {
+    height: 170px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project img {
+    height: auto;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+
+/* Project Details */
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.project-top {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+}
+.project-title {
+    margin-bottom: 20px;
+    padding-right: 25px;
+}
+.goals {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Responsive */
+
+@media screen and (min-height: 430px){
+    #logo img {
+        display: block;
+    }
+}
+
+@media screen and (min-height: 560px){
+    #name {
+        display: block;
+    }
+
+    .nav li:nth-child(1) {
+        border-top: none;
+    }
+}
+
+
+@media screen and  (min-width: 500px){
+    .page {
+        margin: 0;
+        padding: 40px 0;
+    }
+}
+
+@media screen and  (min-width: 800px){
+
+.project-title {
+    width: 50%;
+}
+.project-goals{
+    width: 50%;
+}
+
+}
+
+@media screen and (min-width: 1000px) {
+    #main {
+        width: 100%;
+    }
+
+    .project-top {
+        flex-direction: row;
+    }
+}
