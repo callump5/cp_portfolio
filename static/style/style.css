@@ -111,7 +111,6 @@ body {
 
 #page {
     min-height: var(--page-height);
-    padding: 0 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,10 +118,12 @@ body {
 }
 
 .page-content {
-    max-height: var(--page-height);
+
+    min-height: var(--page-height);
     display: flex;
     flex-direction: column;
     justify-content: center;
+
 }
 
 .page-content h1 {
@@ -146,3 +147,31 @@ body {
     box-shadow: 10px 10px rgba(0, 204, 255, 0.53);
 
 }
+
+
+    #skills {
+        display: flex;
+        flex-direction: column;
+        padding: 25px 15px;
+    }
+
+
+    #skill-items {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skill-item {
+        margin: 10px 0;
+        padding: 0 10px;
+    }
+
+    .skill-item h2 {
+        margin-bottom: 5px;
+
+    }
+
+

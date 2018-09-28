@@ -1,0 +1,1 @@
+web: gunicorn cp_portfolio.wsgi :app
