@@ -1,12 +1,11 @@
-from base import *
+from .base import *
+import dj_database_url
 
 DEBUG = False
 
-#Live
 DATABASES = {
     'default': dj_database_url.config('CLEARDB_DATABASE_URL')
 }
-
 
 # Log DEBUG information to the console
 LOGGING = {
@@ -24,3 +23,10 @@ LOGGING = {
         },
     },
 }
+
+#Amazon web storage
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+AWS_S3_SECURE_URLS = False       # use http instead of https
+AWS_QUERYSTRING_AUTH = False     # don't add complex authentication-related query parameters for requests
+
+AWS_STORAGE_BUCKET_NAME = 'zoes-cakes-irl'
