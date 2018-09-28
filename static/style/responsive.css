@@ -24,12 +24,13 @@
         position: fixed;
         top: 0;
         left: 0;
-        height: 100vh;
+        height: 100%;
         width: 75px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding: 0 12.5px;
     }
 
     #nav-toggle {
@@ -76,6 +77,16 @@
         text-decoration: none;
     }
 
+
+    #page {
+
+        width: 50vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: flex-start;
+
+        margin: 0 auto;
+    }
 }
 
 @media all and (max-width: 500px) {
@@ -85,6 +96,15 @@
 
 /* iPhone Portrait */
 @media screen and (max-device-height: 445px)and (min-device-width: 668px){
+    #page {
+        height: 100vh;
+        width:100%;
+        margin: 0;
+        padding: 0;
+
+        align-items: center;
+
+    }
 #logo-img {display: none}
 }
 

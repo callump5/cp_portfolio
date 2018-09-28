@@ -29,6 +29,10 @@ nav a {
 #page p, #page p {
     font-size: var(--font-size-2);
 }
+
+html,body {
+    min-height: 100vh;
+}
 body {
 
     background-color: var(--background1);
@@ -106,7 +110,7 @@ body {
 }
 
 #page {
-    height: var(--page-height);
+    min-height: var(--page-height);
     padding: 0 15px;
     display: flex;
     flex-direction: column;
