@@ -10,14 +10,6 @@
  *   480-less    - phone landscape & smaller
  * --------------------------------------------
  */
-@media all and (min-width: 1024px) {
-
-
-    .skill-item {
-        width: 50%;
-    }
-
-}
 
 @media all and (min-width: 668px) {
 
@@ -84,41 +76,55 @@
     }
 
     #page {
-
         justify-content: center;
         align-items: flex-start;
         width: 90%;
+
+        min-height: 100vh;
         margin: 0 auto;
-        padding: 50px 0;
     }
 
     .skill-item {
-        width: 48%;
+        width: 100%;
+    }
+
+    .project-text {
+        justify-content: space-between;
+        margin: 0;
+    }
+    .project-desc {
+        width: 60%;
+    }
+    .project-req {
+        text-align: right;
+    }
+
+    .project-links {
+        margin-top: 25px;
     }
 
 }
 
-@media all and (max-width: 500px) {
 
+@media all and (min-width: 1024px) {
 
+    .skill-item {
+        width: 45%;
+    }
 
 }
 
+@media all and (min-width: 500px) {
+    .page-content {
+        align-items: flex-start;
+    }
 
-/* iPhone Portrait */
-
-/* iPhone Landscape */
-/* iPad Portrait */
-@media screen and (min-device-width: 481px) and (orientation:portrait) {
 
 
     #skills {
         padding: 20px;
     }
-}
 
-/* iPad Landscape */
-@media screen and (min-device-width: 481px) and (orientation:landscape) {
 
 }
 
@@ -129,8 +135,8 @@
     #page {
         width:100%;
         margin: 0;
-        padding: 10px;
         align-items: center;
+        justify-content: center;
     }
     .skill-item {
         width: 100%;
@@ -140,15 +146,3 @@
     }
 }
 
-
-@media screen and (max-width: 480px) and (orientation:portrait) {
-    .page-content {
-        padding:0 10px;
-    }
-}
-@media screen and (max-width: 480px) and (orientation:landscape) {
-    #about, .page-content {
-
-        height: 20px;
-    }
-}

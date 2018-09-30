@@ -7,35 +7,20 @@
         <h1>Skills</h1>
 
 
+
         <div id="skill-items">
-            <div class="skill-item">
-                <h2>Communication</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi fugit libero possimus quos recusandae sapiente similique temporibus velit? Accusantium autem natus optio quas quis rerum suscipit voluptate. Dicta, esse numquam.</p>
-            </div>
-            <div class="skill-item">
-                <h2>Communication</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi fugit libero possimus quos recusandae sapiente similique temporibus velit? Accusantium autem natus optio quas quis rerum suscipit voluptate. Dicta, esse numquam.</p>
-            </div>
-            <div class="skill-item">
-                <h2>Communication</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi fugit libero possimus quos recusandae sapiente similique temporibus velit? Accusantium autem natus optio quas quis rerum suscipit voluptate. Dicta, esse numquam.</p>
-            </div>
-            <div class="skill-item">
-                <h2>Communication</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi fugit libero possimus quos recusandae sapiente similique temporibus velit? Accusantium autem natus optio quas quis rerum suscipit voluptate. Dicta, esse numquam.</p>
-            </div>
-            <div class="skill-item">
-                <h2>Communication</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi fugit libero possimus quos recusandae sapiente similique temporibus velit? Accusantium autem natus optio quas quis rerum suscipit voluptate. Dicta, esse numquam.</p>
-            </div>
-            <div class="skill-item">
-                <h2>Communication</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi fugit libero possimus quos recusandae sapiente similique temporibus velit? Accusantium autem natus optio quas quis rerum suscipit voluptate. Dicta, esse numquam.</p>
-            </div>
+            {% for skill in skills %}
+                <div class="skill-item">
+                    <h2>{{ skill }}</h2>
+                    {% autoescape off %}
+                        {{ skill.description }}
+                    {% endautoescape %}
 
-
+                </div>
+            {% endfor %}
         </div>
 
 
     </div>
 {% endblock %}
+

@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <div id="project-item">
+        <h1 class="page-title">{{ project }}</h1>
+
+        <div class="project-text">
+
+            <div class="project-desc">
+                <h2 class="page-title">Job Description</h2>
+                {% autoescape off %}
+                    {{ project.description }}
+                {% endautoescape %}
+            </div>
+
+            <div class="project-req">
+                <h2 class="page-title">Job Requirements</h2>
+                {% for jr in project.job_requirements.all  %}
+                    <p>{{ jr }}</p>
+                {% endfor %}
+
+
+        <div class="project-links">
+            <img src="{{ project.project_logo.url }}">
+            <div>
+                <a class="btn" href="{{ project.website }}">Website</a>
+                <a class="btn" href="{{ project.github }}">Github</a>
+            </div>
+        </div>
+
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}

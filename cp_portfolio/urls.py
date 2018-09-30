@@ -16,11 +16,21 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
+from django.views.static import serve
 from home.views import get_home
+
+from settings.base import STATIC_ROOT, MEDIA_ROOT
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+
+    # Static
+    url(r'^static/(?P<path>.*)$', serve, {'document_root': STATIC_ROOT}),
+    # Media Root
+    url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
+
     url(r'^$', get_home, name='home'),
 
-    url(r'', include('about.urls'))
+    url(r'', include('about.urls')),
+    url(r'', include('portfolio.urls')),
 ]
