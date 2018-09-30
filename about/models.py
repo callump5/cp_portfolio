@@ -18,3 +18,11 @@ class Skill(models.Model):
 
     def __unicode__(self):
         return self.skill
+
+class ContactDetails(models.Model):
+    name = models.CharField(max_length=200)
+    email = models.TextField()
+    number = models.CharField(max_length=12)
+
+    def __unicode__(self):
+        return self.name

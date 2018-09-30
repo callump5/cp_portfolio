@@ -128,13 +128,14 @@
 
 }
 
-@media screen and (max-device-height: 445px)and (min-device-width: 668px){
+@media screen and (max-height: 445px)and (min-width: 650px){
     #about {
         height: 100vh;
     }
     #page {
         width:100%;
         margin: 0;
+        padding: 0 15px;
         align-items: center;
         justify-content: center;
     }

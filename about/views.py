@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-from .models import Skill
+from .models import Skill, ContactDetails
 # Create your views here.
 
 def get_about(request):
@@ -10,3 +10,6 @@ def get_about(request):
     return render(request, 'about/about.html', {'skills':skills})
 
 
+def get_contact(request):
+    contact = ContactDetails.objects.all()
+    return render(request, 'about/contact.html', {'contact': contact})
