@@ -4,6 +4,9 @@
     2 - Min Width 1024px
     3 - Max width 500px
     4 - Max Height 445px and Min Width 650px
+    5 - Max Height 375px and Max Width 667px
+
+
  */
 
 
@@ -143,7 +146,7 @@
 
 /* 4 - Max Height 445px and Min Width 650px */
 
-@media screen and (max-height: 445px)and (min-width: 650px){
+@media screen and (max-height: 445px)and (min-width: 668px){
     #about {
         height: 100vh;
     }
@@ -159,6 +162,17 @@
     }
     #logo-img {
         display: none
+    }
+}
+
+
+
+/* 5 - Max Height 375px and Max Width 667px */
+
+@media screen and (max-width: 667px)and (max-height: 375px) {
+
+    #page {
+        padding: 25px 15px;
     }
 }
 

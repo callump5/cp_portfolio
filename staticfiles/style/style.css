@@ -20,8 +20,7 @@
     --background2: rgba(0, 204, 255, 0.29);
     --navColor1: rgb(25, 255, 154);
     --navColor2: rgb(75, 41, 191);
-    --page-height: calc(100vh - 150px);
-
+    --page-height: calc(100vh - 100px);
     --font-size: 18px;
     --font-size-1: 32px;
     --font-size-2: 24px;
@@ -144,62 +143,58 @@ body {
 
 /* 5 - Base Page */
 
-#page {
-    min-height: var(--page-height);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    padding: 25px 15px;
-}
+    #page {
+        min-height: var(--page-height);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        padding: 0 15px;
+    }
 
-.page-content {
+    .page-content {
 
-    min-height: var(--page-height);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+        min-height: var(--page-height);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
 
-}
+    }
 
-.page-content h1 {
-    margin-bottom: 25px;
-}
+    .page-content h1 {
+        margin-bottom: 25px;
+    }
 
-.page-content p {
-    margin-bottom: 20px;
-}
+    .page-content p {
+        margin-bottom: 20px;
+    }
 
 
-.page-title {
-    margin-bottom: 10px;
-}
+    .page-title {
+        margin-bottom: 10px;
+    }
 
-.btn {
-    border: 2px solid var(--background2);
-    border-radius: 5px;
-    padding: 10px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .btn {
+        border: 2px solid var(--background2);
+        border-radius: 5px;
+        padding: 10px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.btn:hover {
-    border: 2px solid rgba(0, 204, 255, 0.53);
-    box-shadow: 10px 10px rgba(0, 204, 255, 0.53);
+    .btn:hover {
+        border: 2px solid rgba(0, 204, 255, 0.53);
+        box-shadow: 10px 10px rgba(0, 204, 255, 0.53);
 
-}
+    }
 
 
 /* 6 - About Page */
 
-
-.page-content {
-
-}
 
     #skills {
         display: flex;
