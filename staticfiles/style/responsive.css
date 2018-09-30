@@ -1,21 +1,21 @@
-/**
- * Basic CSS Media Query Template
- * TODO: I should probably use Sass...
- * Author: Michael Vieth
- * ------------------------------------------
- *  Responsive Grid Media Queries - 1280, 1024, 768, 480
- *   1280-1024   - desktop (default grid)
- *   1024-768    - tablet landscape
- *   768-480     - tablet
- *   480-less    - phone landscape & smaller
- * --------------------------------------------
+/* Responsive Index:
+
+    1 - Min Width 668px
+    2 - Min Width 1024px
+    3 - Max width 500px
+    4 - Max Height 445px and Min Width 650px
  */
 
+
+/*  1 - Min Width 668px */
 @media all and (min-width: 668px) {
 
+/* Index */
     body {
         margin-left: 101px;
     }
+
+    /* Nav */
 
     nav {
         position: fixed;
@@ -75,6 +75,8 @@
         text-decoration: none;
     }
 
+/* Base Page */
+
     #page {
         justify-content: center;
         align-items: flex-start;
@@ -84,27 +86,32 @@
         margin: 0 auto;
     }
 
+/* About Page */
+
     .skill-item {
         width: 100%;
     }
+
+/* Project */
 
     .project-text {
         justify-content: space-between;
         margin: 0;
     }
     .project-desc {
-        width: 60%;
+        width: 100%;
     }
     .project-req {
         text-align: right;
     }
-
     .project-links {
         margin-top: 25px;
     }
-
 }
 
+
+
+/* 2 - Min Width 1024px */
 
 @media all and (min-width: 1024px) {
 
@@ -112,21 +119,29 @@
         width: 45%;
     }
 
+    .project-desc {
+        width: 70%;
+    }
+
 }
+
+
+
+/* 3 - Max width 500px */
 
 @media all and (min-width: 500px) {
     .page-content {
         align-items: flex-start;
     }
 
-
-
     #skills {
         padding: 20px;
     }
-
-
 }
+
+
+
+/* 4 - Max Height 445px and Min Width 650px */
 
 @media screen and (max-height: 445px)and (min-width: 650px){
     #about {
