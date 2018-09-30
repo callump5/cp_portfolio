@@ -258,6 +258,8 @@ body {
     #project-item {
         display: flex;
         flex-direction: column;
+
+        padding: 20px 0;
     }
 
     .project-text {
