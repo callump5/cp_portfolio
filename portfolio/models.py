@@ -22,11 +22,12 @@ class Project(models.Model):
     project = models.CharField(max_length=200)
     slug = models.SlugField()
     project_logo = models.ImageField(upload_to=upload_img)
-    brief = models.CharField(max_length=250)
     description = HTMLField()
     job_requirements = models.ManyToManyField(JobRequirement)
-    website = models.TextField()
-    github = models.TextField()
+    website =  models.CharField(max_length=200)
+    github =  models.CharField(max_length=200)
+    client = models.CharField(max_length=200)
+    testimonial = HTMLField()
 
 
     def __unicode__(self):

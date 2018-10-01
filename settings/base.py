@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'home',
     'about',
     'portfolio',
+    'commercial',
     'tinymce'
 ]
 

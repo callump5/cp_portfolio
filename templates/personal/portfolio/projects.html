@@ -1,0 +1,16 @@
+{% extends 'personal/index.html' %}
+
+{% block content %}
+
+    <div id="projects">
+        {% for project in projects  %}
+            <div class="project">
+                <img src="{{ project.project_logo.url }}">
+
+                <div class="btn-div">
+                    <a class="btn" href="/portfolio/{{ project.slug }}/">{{ project }}</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'commercial/index.html' %}
+
+{% block content %}
+
+    <div id="landing" class="page">
+        <div class="container">
+            <div id="landing-contnent">
+
+                <div class="landing-text">
+                    <h1 class="page-title">Need a powerful, effective website for your new business venture?</h1>
+
+                    <p>We can help build you a modern, mobile-friendlly , website which is FREE and easy to update!</p>
+                </div>
+
+                <div class="btns">
+                    <a class="btn">Get Case Studies</a>
+                    <a class="btn">Get A Price</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="case-studies" class="page">
+        <div class="container">
+            <div class="flex-col">
+                <h1 class="page-title">Case Studies</h1>
+
+                {% for project in projects %}
+
+                    <div class="case-study">
+                        <h1>{{ project }}</h1>
+
+                        <h2>What they said:</h2>
+
+                        {% autoescape off %}
+                            {{ project.testimonial | truncatewords:100 }}
+                        {% endautoescape %}
+
+                        <p class="client"> - {{ project.client }}</p>
+
+
+                        <h2>What they wanted:</h2>
+                        <img src="{{ project.project_logo.url }}">
+                        {% autoescape off %}
+                            {{ project.description | truncatewords:140 }}
+                        {% endautoescape %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div id="features">
+
+
+    <h1 class="page-title">Features</h1>
+
+    <div id="job_recs">
+        {% for job_rec in job_reqs %}
+            <p>{{ job_rec }}</p>
+        {% endfor %}
+    </div>
+
+
+
+    </div>
+
+
+{% endblock %}

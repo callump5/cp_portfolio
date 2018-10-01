@@ -31,6 +31,10 @@ urlpatterns = [
 
     url(r'^$', get_home, name='home'),
 
+
     url(r'', include('about.urls')),
     url(r'', include('portfolio.urls')),
+
+    url(r'', include('commercial.urls')),
+
 ]

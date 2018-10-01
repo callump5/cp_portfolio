@@ -9,8 +9,8 @@ from .models import Project
 
 def get_portfolio(request):
     projects = Project.objects.all()
-    return render(request, 'portfolio/projects.html', {'projects': projects})
+    return render(request, 'personal/portfolio/projects.html', {'projects': projects})
 
 def get_project(request, slug):
     project = Project.objects.get(slug__exact=slug)
-    return render(request, 'portfolio/project.html', {'project': project})
+    return render(request, 'personal/portfolio/project.html', {'project': project})

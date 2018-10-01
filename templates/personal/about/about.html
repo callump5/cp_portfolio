@@ -1,0 +1,26 @@
+{% extends 'personal/index.html' %}
+
+{% block content %}
+
+
+    <div id="skills" class="page-title">
+        <h1>Skills</h1>
+
+
+
+        <div id="skill-items">
+            {% for skill in skills %}
+                <div class="skill-item">
+                    <h2>{{ skill }}</h2>
+                    {% autoescape off %}
+                        {{ skill.description }}
+                    {% endautoescape %}
+
+                </div>
+            {% endfor %}
+        </div>
+
+
+    </div>
+{% endblock %}
+

@@ -7,9 +7,9 @@ from .models import Skill, ContactDetails
 
 def get_about(request):
     skills = Skill.objects.all()
-    return render(request, 'about/about.html', {'skills':skills})
+    return render(request, 'personal/about/about.html', {'skills':skills})
 
 
 def get_contact(request):
     contact = ContactDetails.objects.all()
-    return render(request, 'about/contact.html', {'contact': contact})
+    return render(request, 'personal/about/contact.html', {'contact': contact})

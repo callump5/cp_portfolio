@@ -1,0 +1,174 @@
+/* Responsive Index:
+
+    1 - Min Width 668px
+    2 - Min Width 1024px
+    3 - Max width 500px
+    4 - Max Height 445px and Min Width 650px
+    5 - Max Height 375px and Max Width 667px
+
+
+ */
+
+
+/*  1 - Min Width 668px */
+@media all and (min-width: 668px) {
+
+/* Index */
+    body {
+        margin-left: 101px;
+    }
+
+    /* Nav */
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 75px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 12.5px;
+    }
+
+    #nav-toggle {
+        display: none;
+    }
+
+    #logo {
+        width: 75px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    #logo img {
+        position: absolute;
+        left: 11.5px;
+        top: 12.5px;
+        margin: 0 0 50px 0;
+    }
+
+    #nav-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #name {
+        display: block;
+
+        padding: 20px 0;
+    }
+
+    #name:hover {
+        background-color: rgba(255, 255, 255, 0.41);
+    }
+
+    #nav-links {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    #nav-links li a {
+        width: 75px;
+        text-align: center;
+        padding: 20px 0;
+        text-decoration: none;
+    }
+
+/* Base Page */
+
+    #page {
+        justify-content: center;
+        align-items: flex-start;
+        width: 90%;
+
+        min-height: 100vh;
+        margin: 0 auto;
+    }
+
+/* About Page */
+
+    .skill-item {
+        width: 100%;
+    }
+
+/* Project */
+
+    .project-text {
+        justify-content: space-between;
+        margin: 0;
+    }
+    .project-desc {
+        width: 100%;
+    }
+    .project-req {
+        text-align: right;
+    }
+    .project-links {
+        margin-top: 25px;
+    }
+}
+
+
+
+/* 2 - Min Width 1024px */
+
+@media all and (min-width: 1024px) {
+
+    .skill-item {
+        width: 45%;
+    }
+
+    .project-desc {
+        width: 70%;
+    }
+
+}
+
+
+
+/* 3 - Max width 500px */
+
+@media all and (min-width: 500px) {
+    .page-content {
+        align-items: flex-start;
+    }
+}
+
+
+
+/* 4 - Max Height 445px and Min Width 650px */
+
+@media screen and (max-height: 445px)and (min-width: 668px){
+    #about {
+        height: 100vh;
+    }
+    #page {
+        width:100%;
+        margin: 0;
+        padding: 0 15px;
+        align-items: center;
+        justify-content: center;
+    }
+    .skill-item {
+        width: 100%;
+    }
+    #logo-img {
+        display: none
+    }
+}
+
+
+
+/* 5 - Max Height 375px and Max Width 667px */
+
+@media screen and (max-width: 667px)and (max-height: 375px) {
+
+    #page {
+        padding: 25px 15px;
+    }
+}
+

@@ -9,4 +9,4 @@ import datetime
 
 def get_home(request):
     now = datetime.datetime.now()
-    return render(request, 'home/home.html', {'now': now})
+    return render(request, 'personal/home/home.html', {'now': now})
