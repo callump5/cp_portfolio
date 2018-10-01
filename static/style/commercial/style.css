@@ -209,7 +209,7 @@ h2 {
     border-radius: 20px;
 }
 
-div.case-study:nth-child(2) {
+div.case-study:nth-child(even) {
     background-color: #ffe066;
 }
 .case-study h1 {

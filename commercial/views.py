@@ -9,6 +9,6 @@ from portfolio.models import Project, JobRequirement
 
 def get_commercial(request):
     job_reqs = JobRequirement.objects.all()
-    projects = Project.objects.all()
+    projects = Project.objects.all()[0:2]
     return render(request, 'commercial/home.html', {'projects': projects,
                                                     'job_reqs':job_reqs})
