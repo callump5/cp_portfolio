@@ -284,7 +284,7 @@ div.case-study:nth-child(even) {
 {
     color: #f9dc5c;
 }
-#job_recs > p:nth-child(5n)
+#job_recs > p:nth-child(9n)
 {
     color: #308dbf;
 }
