@@ -55,7 +55,6 @@ h2 {
 }
 
 .page-title {
-    color: rgb(0, 135, 255);
     font-size: var(--font-size-3)
 }
 
@@ -163,7 +162,7 @@ h2 {
 
 
 #nav-btn, .btn {
-    background-color: #e84855;
+    background-color: rgb(38, 170, 255);
     color: white;
 }
 
@@ -176,9 +175,8 @@ h2 {
 
 #landing {
     height: 60vh;
-    background: linear-gradient(135deg, var(--navColor1) 50%, var(--navColor2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=1); /* IE6-9 fallback on horizontal gradient */
 
+    background-color: #403f4c;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -223,10 +221,14 @@ div.case-study:nth-child(even) {
     text-align: justify;
 }
 .case-study img {
-    height: auto;
+    height: 100%;
     width: 100%;
     float: right;
     margin-bottom: 25px;
+    background-image: url("/static/responsive.png");
+    background-size: 100%;
+    padding: 12.5px 12.5px 50px 12.5px;
+
 }
 .client {
     font-size: 16px;
