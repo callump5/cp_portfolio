@@ -14,6 +14,8 @@ class Booking(models.Model):
 
 
     TIME_CHOICES = (
+        (time(9, 00, 00), u'9 AM'),
+        (time(10, 00, 00), u'10 AM'),
         (time(11, 00, 00), u'11 AM'),
         (time(12, 00, 00), u'12 PM'),
         (time(13, 00, 00), u'1 PM'),
