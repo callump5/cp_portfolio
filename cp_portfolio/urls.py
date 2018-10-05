@@ -29,7 +29,7 @@ urlpatterns = [
     # Media Root
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
 
-    url(r'^$', get_home, name='home'),
+    url(r'^$', get_home),
 
 
     url(r'', include('about.urls')),

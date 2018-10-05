@@ -1,15 +1,17 @@
 {% extends 'commercial/index.html' %}
 
+
+
 {% block content %}
 
     <div id="landing" class="page">
         <div class="container">
-            <div id="landing-contnent">
+            <div id="landing-content">
 
                 <div class="landing-text">
                     <h1 class="page-title">Need a powerful, effective website for your new business venture?</h1>
 
-                    <p>We can help build you a modern, mobile-friendlly , website which is FREE and easy to update!</p>
+                    <p>We will build you a bespoke, mobile-friendlly, website which is FREE and easy to update!</p>
                 </div>
 
                 <div class="btns">
@@ -21,30 +23,39 @@
     </div>
 
 
-    <div id="case-studies" class="page">
+    <div class="page">
         <div class="container">
-            <div class="flex-col">
+            <div id="case-studies">
                 <h1 class="page-title">Case Studies</h1>
 
                 {% for project in projects %}
 
+
                     <div class="case-study">
-                        <h1>{{ project }}</h1>
+                        <div class="case-text">
 
-                        <h2>What they said:</h2>
-
-                        {% autoescape off %}
-                            {{ project.testimonial | truncatewords:100 }}
-                        {% endautoescape %}
-
-                        <p class="client"> - {{ project.client }}</p>
+                            <h1>{{ project }}</h1>
 
 
-                        <h2>What they wanted:</h2>
-                        <img src="{{ project.project_logo.url }}">
-                        {% autoescape off %}
-                            {{ project.description | truncatewords:140 }}
-                        {% endautoescape %}
+                            <h2>What they said:</h2>
+                            {% autoescape off %}
+                                {{ project.testimonial | truncatewords:100 }}
+                            {% endautoescape %}
+                            <p class="client"> - {{ project.client }}</p>
+
+
+                            <div class="case-req">
+                                {% for jr in job_reqs  %}
+                                    <p>{{ jr }}</p>
+                                {% endfor %}
+                            </div>
+
+                        </div>
+
+                        <div class="case-img">
+                            <img src="{{ project.project_logo.url }}">
+                        </div>
+
                     </div>
                 {% endfor %}
             </div>
@@ -52,18 +63,19 @@
     </div>
 
     <div id="features">
+        <h1 class="page-title">Features</h1>
 
-
-    <h1 class="page-title">Features</h1>
-
-    <div id="job_recs">
-        {% for job_rec in job_reqs %}
-            <p>{{ job_rec }}</p>
-        {% endfor %}
+        <div id="job_recs">
+            {% for job_rec in job_reqs %}
+                <p>{{ job_rec }}</p>
+            {% endfor %}
+        </div>
     </div>
 
-
-
+    <div id="booking" class="page">
+        <div class="container">
+            {% include 'commercial/calendar.html' %}
+        </div>
     </div>
 
 

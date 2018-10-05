@@ -14,14 +14,6 @@
 @media all and (min-width: 1028px) {
 
     /* Index */
-    .container {
-        width: 90%;
-        margin: 0 auto;
-        padding: 20px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
 
     /* Nav */
     #nav {
@@ -68,11 +60,11 @@
     }
 
 
-#features p {
-    width: unset;
-    margin-bottom: 5px;
-    justify-content: center;
-}
+    #features p {
+        width: unset;
+        margin-bottom: 5px;
+        justify-content: center;
+    }
 
 
 }
@@ -101,10 +93,30 @@
 
 @media all and (min-width: 500px) {
 
-    .case-study img {
-        height: auto;
-        width: 300px;
-        float: right;margin-left: 20px;
+    .container {max-width: 75%}
+
+    .case-study {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .case-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .case-img {
+        width: unset;
+        margin: 20px 0 20px 20px;
+    }
+
+    .case-req {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: unset;
+        padding-right: 20px;
     }
 }
 
